@@ -1,0 +1,929 @@
+//获取用户系统通知列表
+POST https://localhost/wb/business/searchSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|a5f78512f33107612e1cf34299641d70
+
+{
+  "keyWord": "中央空调",
+  "page": 1,
+  "number": 2,
+  "lat": 31.289278,
+  "lng": 121.521722
+}
+
+###
+
+//获取用户系统通知列表
+POST https://api.netease.im/sms/sendcode.action
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+
+}
+
+###
+
+
+//获取用户系统通知列表
+POST https://localhost/wb/other/getSystemNotifications
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:eec21274-1a09-4729-a941-88215e279bd5|f9bec10b1ce6e0a17977cfd88c81433c
+
+{}
+
+###
+
+
+//获取首页已认证派送员和商户列表
+POST https://localhost/wb/other/getAllDispatcherAndMerchants
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:eec21274-1a09-4729-a941-88215e279bd5|f9bec10b1ce6e0a17977cfd88c81433c
+
+{
+  "lat": 31.03323,
+  "lng": 103.052663
+}
+
+
+###
+//获取全部跑腿代办、同城配送
+POST https://localhost/wb/business/getAllRunErrand
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|a2602424da8a494f717ea17114fd793b
+
+{
+  "type": 2,
+  "page": 2,
+  "number": 1
+}
+
+###
+//根据订单ID或需求ID获取周围服务者 需求返回该需求附近30公里内的stag对应的服务者列表  跑腿代办和同城配送返回附近30公里内的派送员列表  注意 如果服务者或派送员未更新经纬度时不会返回
+POST https://localhost/wb/other/getNearUserList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:eec21274-1a09-4729-a941-88215e279bd5|4944efb83cf8750483b30abb0873be2a
+
+{
+  "orderId": "wb-1581863669767"
+}
+
+###
+
+//派送员认证
+POST https://localhost/wb/other/dispatcherCertification
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c39ffb58-9ae5-46b8-a45c-8a46cde5e544|bdd0d0621190874f8cc9c16bf2bb652c
+
+
+###
+
+
+//注册
+POST https://localhost/wb/sign/register
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "18001002223",
+  "userType": 0,
+  "msgCode": "4317",
+  "password": "WB5fdQ0qJi+l4KxdeUbnyIIkIpsrXboSDRewcGxEQeph4KnSwjHHOeerT1JFeMccP0MAs/TazpDusdUN94qynhz+mzA5Zr4aYMK7gU3PT+EHPgEcjRLVlWVSleOYi4k1Ht01L4+kYw+Yz87lGzxTL1b+KnCSVHMFJz24r6x5T7FMgCXjgUUxTzg19uaEd/wPRkGHT8aJJmeGldJ3zoF13nCIUgeQ5mB6bfTmJaArgrnPqh8DYYFJ8PDXvrxjGJR0AfLvd0g+5+nzuD7qHtgbiN/cqMib65MMV+NYKUGQH5lCrvWwC+fJZUV7gj/FltHSWOjJNZHwMDfXbarOaT3B0Q==",
+  "registerType": 0
+}
+
+###
+
+//获取验证码
+POST https://localhost/wb/sign/getMsgCode
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "18088889999"
+}
+
+
+###
+
+//登陆 localhost localhost
+POST https://localhost/wb/sign/doSign
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "18088889999",
+  "msgCode": "3855",
+  "password": "olRzZJZoZvppa66ULi2Co+s0BJZpLcuecEslTUHbaeax3aXDFQ/wahq3ea5YhkHZ5FB1Y5JmsyRdqIF7VmrJNP4htIt4Lgn8+7TRReyRyxg4HIHK5z5RK8w9TKi0W/yNFPdJX4ShTRtgU1OBNG2i8wg/P3SpEAjQrs+igtPtDI7k/Dbzc22+A7wxM3CMIyL9v+3vx6O36+KqxalC504XzziJZuEBaeCwRZaG3ObZHyLpmpKbJoKUGJLe98HNwDJzn17YtJWiWjLk0zijHQTNEB6TD3padn+GiOd3XIliKRB5EOeSPPcRpiDSQ3ar4eqA+axWiAh9u7k23EOWEMKWnQ==",
+  "signType": 0,
+  "cType": 0,
+  "userType": 0
+}
+
+###
+
+
+
+
+//计算价格
+POST https://localhost/wb/business/calculatePrice
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:9416e6eb-6dab-4c7c-b527-6f636dce8659|0e817c22f79cdf52c17879daa4e88258
+
+{
+  "bType": 0,
+  "addresId": 9,
+  "bTime": 1578299979000,
+  "businessAddressId": 10
+}
+
+###
+
+//获取申请提现记录
+POST https://localhost/wb/other/getWithdrawal
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|e0240cddacec8458a28854029d415688
+
+{
+}
+
+###
+//申请提现
+POST https://localhost/wb/other/withdrawal
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|e0240cddacec8458a28854029d415688
+
+{
+  "price": 100000,
+  "alipayUserName": "张三",
+  "aliaAccount": "dev_zwy@aliyun.com"
+}
+
+
+###
+//获取全部需求
+POST https://localhost/wb/other/getAllRequirements
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|7207e2306b2f3a186d651adaed2ddd8d
+
+{
+  "lat": 37.785834,
+  "lng": -122.406417,
+  "page": 1,
+  "number": 5
+}
+
+
+###
+//获取我发布的全部需求
+POST https://localhost/wb/other/getMyRequirements
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|7207e2306b2f3a186d651adaed2ddd8d
+
+{
+  "page": 1,
+  "number": 3
+}
+
+###
+//需求详情
+POST https://localhost/wb/other/requirementsDetails
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:6a39bb14-4714-4ea5-9225-f17174f8f495|593dbd00ccd866dfc2a1349f7e4f7a8a
+
+{
+  "id": "5524"
+}
+
+###
+//报名需求
+POST https://localhost/wb/other/signUpRequirements
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:5e3a6ade-1f7c-4b7f-ab35-043447e3d08c|828e3d4609966876e4bf7029b87a478d
+
+{
+  "demandId": "5525",
+  "skillId": "835"
+}
+
+###
+
+//发布需求
+POST https://localhost/wb/other/releaseRequirements
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|7207e2306b2f3a186d651adaed2ddd8d
+
+{
+  "p_tag":4,
+  "s_tag": 31,
+  "lat": 100,
+  "lng": 111,
+  "serviceTime": {{$randomInt}},
+  "expiryDate": 0,
+  "genderRequirements": -1,
+  "serviceMode": 1,
+  "demandDescribe": "This is a test of a release requirements"
+}
+
+###
+
+
+//余额充值
+POST https://localhost/wb/other/addBalance
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:9416e6eb-6dab-4c7c-b527-6f636dce8659|0e817c22f79cdf52c17879daa4e88258
+
+{
+  "doType": 1,
+  "price": "1"
+}
+
+###
+//获取余额流水
+POST https://localhost/wb/other/getBalanceRecord
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:9416e6eb-6dab-4c7c-b527-6f636dce8659|0e817c22f79cdf52c17879daa4e88258
+
+{
+  "bType": 2
+}
+
+###
+
+//设置支付密码
+POST https://localhost/wb/other/setPassword
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:e2f7657b-8629-414a-b1da-a1913d24bf80|0abe95874601be21190abecf62b82fcf
+
+{
+  "password": "PQ0OuZRo+AYS8/3RNUPF11LoAkt4MQwDAiAQwrs5Q99k+vV6MoRrdvCD+NI5ktLnOS1Buo1VSrTcyXBpnUO2gAD5H+zWCOq82key26kU49YqR8pGDUgRug6myrSK8e2XyGDAVDbepNHWss23oMqqKL6zIm6PgGP0QH8fMx+R4t7/ty8wejULGgh6H9mxLrujzUrNTtMBdPDTfm0A8tZfQMjHcN5Xyk6Gn1DAIED9JEvyT5riIqVjJZrxi6nEMKpuLK1l+cmS+B9aImKKbeJpf0olMSD912ylbWBBFXTsoUsynBcYJji/SN1ioNBF365GBFhVf/vFyUoEkRabPybwqQ=="
+}
+
+###
+
+//重置支付密码
+POST https://localhost/wb/other/reSetPassword
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:9416e6eb-6dab-4c7c-b527-6f636dce8659|0e817c22f79cdf52c17879daa4e88258
+
+{
+  "newPassword": "Zo85RrMs8aHzMdeO8JjgywEE3YNA8UX+1yN/B+sOs5Z5/OMzhgG67RatoJGh7NZuaAqBuyIiOEODeWlu3W5EMv8ITXbwAO+Si17ID551cUpXht3+++37UTZbaw/5ZbeC6jBBLIlUJF9vx0Vgr2GPwMh2SMnpG2849CI5qQseqfVDfYl1pqJuEMUzy5mBH5PL9F2Kfb9a+lD1F3K+x3VKzmZ7d2+AJwtnWv3STcMh4PkGvhtISfqbZaktcbAaEPivqS/ntSx6nRCgEMdJ05otj1fOblh4BY7Q7aNMseUq89Qakv8B3EB6Cz/goDUxprsZQrOUJ5lvUf1ZkBfjFMXs8Q==",
+  "password": "PQ0OuZRo+AYS8/3RNUPF11LoAkt4MQwDAiAQwrs5Q99k+vV6MoRrdvCD+NI5ktLnOS1Buo1VSrTcyXBpnUO2gAD5H+zWCOq82key26kU49YqR8pGDUgRug6myrSK8e2XyGDAVDbepNHWss23oMqqKL6zIm6PgGP0QH8fMx+R4t7/ty8wejULGgh6H9mxLrujzUrNTtMBdPDTfm0A8tZfQMjHcN5Xyk6Gn1DAIED9JEvyT5riIqVjJZrxi6nEMKpuLK1l+cmS+B9aImKKbeJpf0olMSD912ylbWBBFXTsoUsynBcYJji/SN1ioNBF365GBFhVf/vFyUoEkRabPybwqQ=="
+}
+
+###
+//加解密测试
+GET https://localhost/wb/user/RSATest?testStr=15317026222&doType=0
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###
+//获取商户列表
+POST https://localhost/wb/business/getMerchantList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|a2602424da8a494f717ea17114fd793b
+
+{
+  "page": 1,
+  "number": 2
+}
+
+###
+###
+//获取上传token
+POST https://localhost/wb/business/getQNToken
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+
+
+###
+
+
+
+
+
+
+
+//获取订单详情
+POST https://localhost/wb/business/getOrderDetail
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c39ffb58-9ae5-46b8-a45c-8a46cde5e544|bab55c9251d3267f2397bef120a51024
+
+{
+  "orderId": "wb-1581863668636"
+}
+
+###
+
+
+
+//获取跑腿代办标签
+POST https://localhost/wb/business/getRunErrandsTags
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+
+
+###
+
+
+//获取商户详情
+POST https://localhost/wb/business/getMerchantDetail
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|fb152dd47619a14274196690dc3073ca
+
+{
+  "userId": "62d6a3a2-9371-48f2-bf20-1133debf124c"
+}
+
+
+###
+//商户入驻/修改商户资料
+POST https://localhost/wb/business/merchantAuth
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|503a009ae0cc7ad1679155f0879dce98
+
+{
+  "merchanTitle": "TestTitle",
+  "merchanUserName": "Jason",
+  "merchanPhoneNumber": "1888888888",
+  "idemyityName": "nusC47QC+qJZSYwVdUDBcTfdOPJVgJpmYCiSd7QtTkb0ztoMo0hJDjG3T+jxAWvuYZBVvs1LCVWk5+Cp3qC/DQr64HKIvp1YR8ruVv8vBq+yUOT1JAXnzpGFZ2usQq3+23upzhgnTBY0bKkBaiUWcTP7usJPpNSlLNjI2eGA1v73MF1E95fNFlkBZ4XMV6v5i8gJd436Z4OZ5kuK6NToiCxY6zLEGCNKjXc/6tuv5Ml4KavRKpo7k9rAM49Rh0BZNZyLSnrNUbSnfQeJzLE+y+bqg30hJkWb816JsevwnVXUKK7YO9QfBcrC5zxk4SHbAVKgvmcv9JPCEfID/iAxhA==",
+  "idemyityCardNumber": "AQL11eYp5iTakZDbWglV79uIIiblvG8al4tw+blZuq0646qD8faU/i9MrFtZ2knWwSd6yx2U5ZmgAMPbBgW23CqZv7xfWT3zKU64Ln08hizYVA0R6v/dX0uqFah/HO6FC0Z4sSA3laov2FX/VcIBIgn2w9z6Wyb+gnfTGHmlaR+YhzaX+6PcfAo/YpjUT28DsuA2GwXbJz2uyns1PmbcV305nxMKMbhx8wj3K78Fj8+GZQdn7h3YeSQtDBYZMZcAiYdIdw2WlvrllZjHAFzRMEJCZuzxz6LnYoYaA8v6PvKEIwY1FTxPweHwTKMq3+a8CfhygX6v1HgLAIMAufqn+w==",
+  "merchanPhotos": "aaaaa|bbbb",
+  "merchanBaseTagId": 5,
+  "serviceTime": "lll",
+  "city_merchan": "TestCity222222",
+  "addressDetail_Merchan": "aaaaaa",
+  "addressInfo": "testInfo",
+  "serverBusinessLicenseType": 0,
+  "serverBusinessLicenseName": "testName",
+  "serverBusinessLicenseNumber": "111111",
+  "serverBusinessLicenseEndTime": 10000111,
+  "serverBusinessLicensePhotos": "aaa",
+  "serverPermitLicenseNmae": "name",
+  "serverPermitLicenseRange": "aaaaa",
+  "serverPermitLicenseEndTime": 111,
+  "serverPermitLicensePhotos": "ccccc"
+}
+
+###
+//订单评价
+POST https://localhost/wb/business/orderComm
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 912424d5-687e-4197-9537-50822bf1d75f|6d97bdb91e2cd17e56fcdcfd88aaee15
+
+{
+  "orderId": "wb-1578316357647",
+  "commStar": 5,
+  "content": "测试111111"
+}
+
+###
+
+
+//发布跑腿代办同城配送
+POST https://localhost/wb/business/createRunErrand
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:e2f7657b-8629-414a-b1da-a1913d24bf80|0abe95874601be21190abecf62b82fcf
+
+
+{
+  "bType": 1,
+  "tradeNames": "同城配送订单",
+  "tempoDiServizio": -1,
+  "sendLat": 100,
+  "sendLng": 100,
+  "addresId": 73,
+  "price": 1000,
+  "businessAddressId": 78,
+  "decInfo": "同城配送订单备注",
+  "intraType": 0
+}
+
+###
+
+//订单支付
+POST https://localhost/wb/business/pay
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:e2f7657b-8629-414a-b1da-a1913d24bf80|0abe95874601be21190abecf62b82fcf
+
+{
+  "orderId": "wb-1582172907186",
+  "payType": 0,
+  "price": 1000,
+  "password": "PQ0OuZRo+AYS8/3RNUPF11LoAkt4MQwDAiAQwrs5Q99k+vV6MoRrdvCD+NI5ktLnOS1Buo1VSrTcyXBpnUO2gAD5H+zWCOq82key26kU49YqR8pGDUgRug6myrSK8e2XyGDAVDbepNHWss23oMqqKL6zIm6PgGP0QH8fMx+R4t7/ty8wejULGgh6H9mxLrujzUrNTtMBdPDTfm0A8tZfQMjHcN5Xyk6Gn1DAIED9JEvyT5riIqVjJZrxi6nEMKpuLK1l+cmS+B9aImKKbeJpf0olMSD912ylbWBBFXTsoUsynBcYJji/SN1ioNBF365GBFhVf/vFyUoEkRabPybwqQ=="
+}
+
+###
+
+//取消订单
+POST https://localhost/wb/business/cancleOrder
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:ls|1
+
+{
+  "orderId": "wb-1578624949834"
+}
+
+
+###
+
+//抢单 跑腿代办
+POST https://localhost/wb/business/grabUserRunErrandSheet
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:ls|1
+
+{
+  "orderId": "wb-1578624949834"
+}
+
+###
+
+
+//取货
+POST https://localhost/wb/business/takeDelivery
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:ls|1
+
+{
+  "orderId": "wb-1578452595935"
+}
+
+
+
+
+###
+//完成订单
+POST https://localhost/wb/business/finishOrder
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:5e3a6ade-1f7c-4b7f-ab35-043447e3d08c|828e3d4609966876e4bf7029b87a478d
+
+{
+  "orderId": "wb-1579076847813",
+  "tCode": 3481
+}
+
+
+###
+
+
+###
+
+
+
+//购买技能
+POST https://localhost/wb/business/createOrder
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:5a5e869f-08af-44d5-b579-fe663e0d7f0f|4088c7a6b0b15981e989dc78dc60d2ca
+
+{
+  "orderType": 0,
+  "orderBusinessId": 1307,
+  "number": 1,
+  "sTime": -1,
+  "sAddressId": 1311,
+  "orderDec": "需求方购买技能2",
+  "price": 1000,
+  "specsId": 1308,
+  "buyFromDemand": false
+}
+
+
+
+
+###
+
+//更新用户地理位置和推送ID信息
+POST https://localhost/wb/business/updataUserLocationAndDeviceId
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|a2602424da8a494f717ea17114fd793b
+
+{
+  "lat": 31.934386,
+  "lng": 116.419774,
+  "deviceId": ""
+}
+
+
+###
+
+//查询用户余额
+POST http://localhost/wb/business/getBalance
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+
+
+
+###
+
+//获取我的/制定的userId的订单列表
+POST https://localhost/wb/business/getOrderList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|a5e3c3d32f6d7094652babf4fb5d5f9c
+
+{
+}
+
+###
+
+
+
+
+
+//退出登录
+POST https://localhost/wb/sign/signOut
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 9416e6eb-6dab-4c7c-b527-6f636dce8659|eaf4b99b550f5d61af1eec227152d049
+
+
+
+
+###
+//获取技能详情
+POST https://localhost/wb/business/getSkillDetail
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:01388cd3-3df5-4332-9232-031b0d57e42a|1f6fd15d545f7ea8d6b4606a28be5100
+
+{
+  "skillId": 1609
+}
+
+###
+
+###
+
+//发布技能
+POST https://localhost/wb/business/sendSkill
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|7207e2306b2f3a186d651adaed2ddd8d
+
+{
+  "imgsUrl": "http://111222.jpg|http://222222.jpg",
+  "unitStr": "元",
+  "p_tag": 4,
+  "s_tag": 99,
+  "title": "张三发布的技能",
+  "lat": 111.1111111,
+  "lng": 111.2222222,
+  "serviceDec": "张三发布的技能备注",
+  "specsList": [
+    {
+      "specsTitle": "张三发布的技能规格1",
+      "specsPrice": 1000,
+      "unit": "件"
+    },
+    {
+      "specsTitle": "张三发布的技能规格2",
+      "specsPrice": 2000,
+      "unit": "件"
+    }
+  ]
+}
+
+###
+
+
+//获取用户技能列表
+POST https://localhost/wb/business/getSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|7207e2306b2f3a186d651adaed2ddd8d
+
+{
+  "userId": "03241f69-5215-4eb4-8146-7a72d889c39f",
+  "lat": 130.111,
+  "lng": 30.1252,
+  "page": 1,
+  "number": 1
+}
+
+###
+
+
+//获取全部技能列表
+POST https://localhost/wb/business/getAllSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:03241f69-5215-4eb4-8146-7a72d889c39f|66e620610697fa6cbd7ca94726b0499d
+
+{
+  "lat": 31.037872,
+  "lng": 121.251729,
+  "page": 10,
+  "number": 50
+}
+
+
+###
+
+//关注用户
+POST https://localhost/wb/user/likeOrDisLikeUser
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|1
+
+// 1 2    151 153     2 2   155  157   3 2   149
+{
+  "userId": "62d6a3a2-9371-48f2-bf20-1133debf124c",
+  "doType": "0"
+}
+
+
+
+###
+
+//获取关注列表
+POST https://localhost/wb/user/getUserLikedList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+###
+
+
+//收藏/取消收藏技能
+POST https://localhost/wb/business/likeOrUnUnLikeSkill
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|315ee208c9dfff5d927ed4123b194ec5
+
+{
+  "skillId": 368,
+  "doType": 0
+}
+
+
+
+
+
+###
+
+
+//技能留言
+POST https://localhost/wb/business/addSkillMessage
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "skillId": 382,
+  "content": "测试 - 8888888888"
+}
+
+
+###
+
+
+//获取收藏的技能列表
+POST https://localhost/wb/business/getLikedSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|315ee208c9dfff5d927ed4123b194ec5
+
+{
+  "lat": 31.115526,
+  "lng": 121.237262,
+  "page": 1,
+  "number": 2
+}
+
+###
+
+//用户实名认证
+POST https://localhost/wb/user/authCard
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c25988df-95de-4d2e-92d2-2e70be6c8ca1|7207e2306b2f3a186d651adaed2ddd8d
+
+{
+  "cardNumber": "PQ3deyjrYg+aQWLOrc7GQs80uyWs0f+whcVQpswgmR3jKIaAUDJ+2vs5+8qChi2glpBRwzABkcGbnyrwONQSPbeRnjIPZgOG9UOC9MUDnzzxPPNpv35BSKgM3wPvZBOjgKgg6ALyznIU/xGtASPhblnH3WlNc5BOCDjpAQAGbnSUFja06TmKbG9fkHzKQJQ0YpYs9u5H0O6ecJkysKFqrVTBnbBxoG3qwYVTkb7C4U3OA9C61A+qh33cPqG9wICyBksdW/XZru1Veb93oEyYT1Yg2xrhVrRZKZp90RXdc7Y35mXBLtY+MYf6taBeF6dpmdrd3DBhTtyinmJGXrGTaQ==",
+  "userRelName": "eK5Z8ypoIcLtoxQEur/5JPWwR/h9PBlEH8PUnbS2VzqKkr6rK7asUJuejdevh0Gsmjh3hLVz1qN1FHuAWWErP9KSouT/huX2ihSTYYGp+2Ul8qcjeINadJ5nVyGzljiO+o6vbef7DUeru/v0CIWcbE7p86dgahjYJPsmry5LTZWusWQccnzuiMuJNaaz93xE5aGqnOJMxtfO6pesUfF22yICWI9mwMVRDccMu+wTA9Aa/uV1+leXlHZ9i0C1je9tFSI0CMWy93qtI923qr0ulWKL0bO6VeGBb/ye4+a3m1QO3+GTqTPxXc+tpbufkSQuA2KOmMuSpYNqttrDrEo3Bw=="
+}
+
+###
+
+
+//校验token
+POST https://localhost/wb/sign/checkUserToken
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c39ffb58-9ae5-46b8-a45c-8a46cde5e544|3fc58c75dfb461828d2c2e993385bc3d
+
+
+###
+//重置密码
+POST https://localhost/wb/sign/reSetPassword
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "15317026229",
+  "msgCode": "111111",
+  "password": "111111111"
+}
+
+###
+
+
+//获取banner
+POST https://localhost/wb/business/getBanner
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "bannerType": 0
+}
+
+###
+
+
+
+//获取动态
+POST http://localhost/wb/business/getDynamic
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+
+###
+
+
+//获取用户资料
+POST https://localhost/wb/user/getUserInfo
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|1
+
+{
+  "userId": ""
+}
+
+###
+//修改用户资料
+POST https://localhost/wb/user/updateUserInfo
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|1
+
+{
+  "birthday": 999999999,
+  "sex": -1,
+  "userLogo": "http://e.hiphotos.baidu.com/image/pic/item/4610b912c8fcc3cef70d70409845d688d53f20f7.jpg",
+  "userName": "系统管理员",
+  "userProfiles": "用户自我介绍"
+}
+
+###
+
+#增加收货地址   紫竹院 "addressLat": 121.358744,"addressLng": 31.043515
+#增加收货地址   宝达城 "addressLat": 121.258757,"addressLng": 31.043526
+#增加收货地址   嘉兴市 "addressLat": 120.756138,"addressLng": 30.736845
+#增加收货地址   天水市 "addressLat": 105.76349,"addressLng": 34.615857
+POST https://localhost/wb/user/addAddress
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:5a5e869f-08af-44d5-b579-fe663e0d7f0f|4088c7a6b0b15981e989dc78dc60d2ca
+
+{
+  "phoneNumber": "15317026229",
+  "address_head": "不是默认",
+  "address_end": "不是默认",
+  "name": "赵",
+  "sex": "1",
+  "tag": "家",
+  "isDefaultAddress": false,
+  "addressLat": 105.76349,
+  "addressLng": 34.615857
+}
+
+###
+
+//获取收货地址
+POST https://localhost/wb/user/getUserAddressList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:f8a07401-cf2c-44a5-9156-3d87a1d13fa3|953f40efe05ee7e4868580573071fbcc
+
+###
+
+
+
+
+//获取标签  localhost       localhost
+POST https://localhost/wb/user/getTags
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{}
+
+###
+
+//获取标签  localhost       localhost
+POST https://localhost/wb/user/getTagsVersion
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###
+

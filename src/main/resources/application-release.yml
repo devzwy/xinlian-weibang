@@ -1,0 +1,119 @@
+spring:
+  cache:
+    type: redis
+    cache-names: apiCache
+  data:
+    redis:
+      repositories:
+        enabled: false
+  devtools:
+    restart:
+      enabled: false
+      additional-paths: src/main/kotlin
+  output:
+    ansi:
+      enabled: always
+  redis:
+    #数据库索引
+    database: 0
+
+    host: r-bp1445e32f7960a4pd.redis.rds.aliyuncs.com
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    port: 6379
+    password: xinlianwl888_
+
+    lettuce:
+      pool:
+        #最大连接数
+        max-active: 8
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: -1
+        #最大空闲
+        max-idle: 8
+        #最小空闲
+        min-idle: 0
+    #连接超时时间
+    timeout: 100000
+  jedis:
+    servers:
+      - r-bp1445e32f7960a4pd.redis.rds.aliyuncs.com:6379
+  #指定模板
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+  mvc:
+    static-path-pattern: /**
+  resources:
+    add-mappings: true
+    # 默认值为
+    static-locations: classpath:/templates/,classpath:/static/,classpath:/static/css/,classpath:/static/js/,classpath:/static/js/ace/,classpath:/static/img/,classpath:/static/fonts/
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /templates
+  datasource:
+    url: jdbc:mysql://rm-bp1hsw3db38do1v0b7o.mysql.rds.aliyuncs.com:3306/wb?useUnicode=true&characterEncoding=utf8
+    username: mysql_xinlian_wb
+    password: xinlianwl888_
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: MYSQL
+    # Show or not log for each sql query
+    show-sql: false
+    # Hibernate ddl auto (create, create-drop, update)
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+    properties:
+      hibernate:
+        #这里如果不指定数据库方言会报错
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  # 是否支持批量上传   (默认值 true)
+  servlet.multipart.enabled: true
+  # 上传文件的临时目录 （linux的默认临时目录定时会被删除会导致上传失败，尽量指定临时目录）
+  servlet.multipart.location:
+  # 上传文件最大为 1M （默认值 1M 根据自身业务自行控制即可）
+  servlet.multipart.max-file-size: 5MB
+  # 设置总上传的数据大小 10M（默认值10M 根据自身业务自行控制即可）
+  servlet.multipart.max-request-size: 10MB
+  # 文件大小阈值，当大于这个阈值时将写入到磁盘，否则存在内存中，（默认值0 一般情况下不用特意修改）
+  servlet.multipart.file-size-threshold: 0
+server:
+  compression:
+    enabled: true
+    mime-types: application/javascript,text/css,application/json,application/xml,text/html,text/xml,text/plain
+  servlet:
+    context-path: /wb
+  port: 443
+  ssl:
+    key-store: classpath:3466421_www.api.huyuwl.cn.pfx
+    key-store-type: PKCS12
+    enabled: true
+    key-alias: Alias
+    key-store-password: 5x92BsPv
+#W51WiSKB
+#rj791eEK
+
+
+release: true
+tagVersion: 1
+
+regan:
+  version: 1.00
+# api配置信息
+api:
+  #解析的controller包 多个用逗号间隔
+  packages: com.xinlian.wb.controller
+  #需要过滤的controller 多个用逗号间隔
+  filters:
+  #主题色，黑：dark、白：light
+  theme: dark
+

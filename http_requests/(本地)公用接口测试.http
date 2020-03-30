@@ -1,0 +1,30 @@
+
+//获取申请提现记录
+POST https://localhost/wb/public/getWithdrawal.action
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|84ffa7218eef5a3888c8cc9323111259
+
+{
+  "state": 0
+}
+
+###
+//申请提现
+POST https://localhost/wb/public/withdrawal.action
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:eec21274-1a09-4729-a941-88215e279bd5|59e5a0264eafe26f6519fee7d23b07f6
+
+{
+
+
+  "price": 1,
+  "alipayUserName": "赵文贇",
+  "aliaAccount": "dev_zwy@aliyun.com"
+}
+
+
+### yun

@@ -1,0 +1,173 @@
+<html>
+<title>微帮Api文档说明</title>
+<head>
+
+</head>
+<body>
+<h1>微帮Api文档说明</h1>
+
+<h3>1.编码格式统一使用UTF-8</h3>
+<div style="color: red">2.接口请求头配置(错误的请求头会返回服务器异常):application/json;charset=utf-8</div>
+
+<h3>3.请求方式以Api文档中标记的方式为准</h3>
+
+<h3>4.接口访问说明</h3>
+<div style="color: red">前端接口直接使用路径+接口名可访问</div>
+<div style="color: red">web页面接口使用路径+接口名+.web访问</div>
+<div style="color: red">登录会返回token，在响应头中，使用token字段返回</div>
+<div style="color: red">业务接口均需要携带userId与token，使用token键上送，格式：userId|token，否则会返回token校验失败的错误</div>
+
+<h3>5.接口中密码、身份证认证的证件号码、姓名均需要使用RSA加密后传输，客户端使用服务端约定好的公钥进行加密</h3>
+
+<div style="color: red">publicKey:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAotNeP1Kly5GpSppIARDBsh5L63N2zHJc349cWxUYD0+dj+mhdIP/J2WXoqpzFP+ysqJLJxIrJkE73R7R5x7voDdL+VYmgTOtLgbpV4ZuS+7/0yo8kiEXeIM6npUHM7/xlPqdLF5iWOzsc+5YvTSoXqhLSDYSfmqX1q3lDQT86i+8g8D/rX6GBQfct6wfH/i0LBhJe5ylvKhKcGjvH6ErMPrjE6XUAg0s9W/yWGfK/kRWGtWxkoO+ZFpYhP2YOrXMb/Zey1pIfs8/lQdXba9abTiYtb1JsDVWdVBMAAJhUytCbRDEUCd2Yb26gyoaPWdnJdERPTkY3sDFTHxV9M1sCQIDAQAB</div>
+<div style="color: red">privateKey:MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCi014/UqXLkalKmkgBEMGyHkvrc3bMclzfj1xbFRgPT52P6aF0g/8nZZeiqnMU/7KyoksnEismQTvdHtHnHu+gN0v5ViaBM60uBulXhm5L7v/TKjySIRd4gzqelQczv/GU+p0sXmJY7Oxz7li9NKheqEtINhJ+apfWreUNBPzqL7yDwP+tfoYFB9y3rB8f+LQsGEl7nKW8qEpwaO8foSsw+uMTpdQCDSz1b/JYZ8r+RFYa1bGSg75kWliE/Zg6tcxv9l7LWkh+zz+VB1dtr1ptOJi1vUmwNVZ1UEwAAmFTK0JtEMRQJ3ZhvbqDKho9Z2cl0RE9ORjewMVMfFX0zWwJAgMBAAECggEAeYTELwAwimgQb4QLPvhRhuyDfppyzAyB8bsdk0B/71Vc4z3a6IlmkPGKJLWPI9nddOIYsnUlzOwckF9jClmVPv5l7hT0sbJuig5Qcaj7giJBvUglYm3eBWvzAM16TY3v717GlIlwXquboL3+bl7xVYvGe4MXdE97OJYZfwj89I0vSPruZb3QATJS9c178bWgQPSY8IabBsXU0Hf4EHjrJL+y6yJ+YPi07oQDOqAIwK3Mufo7AqjREbjR43DMY3LU7Ow05xB85uH1P/ze1z0GtGrExjqab0aRT3jzAjRqqBg6DjOMUgECCZG0uBWk7iE4xrxO55atX8690Boq6VmyMQKBgQDkB8JxYvKFYiurYxnxYsLQ41YzoC9bOSIjrV1n5YUNQneW8WH7v9DffIemMpzVBxVcp8t89+4S6xErEYtRZCSCww44BvvxQXAK3W8RoCvi8r6LyjhKnY0OzGqkk0EuXuN5KpP6HYF2ulkyDOD3wZ19FSKX0VpIg4FvvAQhIyEOVQKBgQC2zCg4wPMCROXP3LnSgRmtQX/W2CskFBvTLxIUEk+ES3F8469pQkmWRqlNaojlM9u7FmSjdzgtJgDJxfugzdSxyT+Ms/U4q9djZOxXjlGnsmj14UT1zzDtEHX37ZkGCzoT2jZuhYGQiHoRxuyI5fmqIHuHSWlzwl9KLmPJ1rMy5QKBgQCrmstR2Uz55C9JA4N6jQBfgzZUE7CPzidLAiTRE4FVwTeOeIlsk6X1ChprkJtGFdaVrBEPMuYPhqec6c8WqW5wmaoRr+/aV4yiIJJ9iTR9zoBnYv+J55dIE74NrGPZKb+2Z7yE9b+AQizt5ZNH4IVMpKMr7XksKQs3sx7IcU9nIQKBgD3BmXEbFr5UgoOIIatRfFhBQaxW2bRVqtTdGTF4wi6CwnOcBH3+LBg+BSKndFpi+8AoH5XuSCdQqIGChrFb+Jib0gF6JsWfoKPuy74E0edi6fzvvzmAZxogLoq1VbZqApQEa9FI/23R/dOVrgHOGFv2n2UkUyENsN3B8GqXQ3FVAoGAQ1VvyyXOWeHfqd7AdzGoiWk1LVCS/F18+85IrUL0nuDPczqWEwlhUrn1+g4P2k8JpEomLJlArNGgLj4x9khFChtisaAB5jr1hUS62CXJZeNF+EKXxbncY9zrC//YfxkDvShrmq2+QcEj7hy46Y0dFEe+FeGwj3mZPOLBNVwxZOY=</div>
+
+<h3>6.需要加密传输的数据：登录、注册、重置密码接口中的密码字段。身份证认证或涉及身份证认证相关接口中的身份证号和姓名字段</h3>
+
+<h4>Api调用路径: <a href="https://114.116.213.202/wb/web/getLuckFrawNumber.web">https://114.116.213.202/wb/</a></h4>
+
+
+<tr>
+    <td><br/>
+        <b><font color="#0B610B">更新记录</font></b>
+        <hr size="2" width="100%" align="center"/>
+        <ul>
+
+            <li>2019-1-7 16:50:12(今天)</li>
+            <br>
+            <div style="color: #5cb85c">订单列表增加是否评价字段</div>
+            <div style="color: #5cb85c">订单列表增加业务实体返回</div>
+            <div style="color: #5cb85c">订单详情增加是否评价字段</div>
+            <div style="color: #5cb85c">修复代理商无法注册问题</div>
+
+            <li>2019-1-6 10:50:12</li>
+            <br>
+            <div style="color: #5cb85c">技能详情、技能列表各增加字段，返回商户实体</div>
+            <div style="color: #5cb85c">添加收货地址接口增加经纬度字段</div>
+            <div style="color: #5cb85c">修复获取技能列表bug</div>
+            <div style="color: #5cb85c">修改发布同城配送和跑腿代办订单传入参数</div>
+            <div style="color: #5cb85c">增加跑腿代办同城配送计算金额接口</div>
+
+            <br>
+
+            <li>2019-12-30 10:50:12</li>
+            <br>
+            <div style="color: #5cb85c">新增余额申请提现接口</div>
+            <div style="color: #5cb85c">新增获取申请的余额提现列表接口</div>
+            <div style="color: #5cb85c">新增标注余额提现是否成功接口</div>
+            <div style="color: #5cb85c">商户认证接口增加实名信息解密，原明文传输的身份证号码和姓名校验不通过</div>
+            <div style="color: #5cb85c">修复验证码可以多次发送的bug</div>
+            <br>
+
+            <li>2019-12-26 11:50:12</li>
+            <br>
+            <div style="color: #5cb85c">新增发布需求接口</div>
+            <div style="color: #5cb85c">新增需求抢单(报名)接口</div>
+            <div style="color: #5cb85c">新增需求详情接口</div>
+            <div style="color: #5cb85c">新增获取我的需求列表接口</div>
+            <div style="color: #5cb85c">新增获取全部需求列表接口</div>
+
+
+            <br>
+
+            <li>2019-12-24 15:50:12</li>
+            <br>
+
+            <div style="color: #5cb85c">修复部分bug</div>
+            <div style="color: #5cb85c">修复.DS_Store文件引起的异常</div>
+            <div style="color: #5cb85c">更换证书</div>
+            <div style="color: #5cb85c">修复发布技能时经纬度丢失的问题</div>
+            <div style="color: #5cb85c">去除发布技能接口部分参数并增加title必填字段</div>
+
+
+            <br>
+            <li>2019-12-23 11:34:12</li>
+            <br>
+
+            <div style="color: #5cb85c">修复部分bug</div>
+            <div style="color: #5cb85c">增加用户余额充值接口(待测试、微信支付宝回掉)</div>
+            <div style="color: #5cb85c">增加管理员后台拨款接口(该接口可给自己和用户充值余额，自己变动的余额没有流水，用户变动余额的流水显示为管理员发放红包)</div>
+            <div style="color: #5cb85c">优化部分接口的请求速度</div>
+            <br>
+
+
+            <li>2019-12-19 11:34:12</li>
+            <br>
+
+            <div style="color: #5cb85c">Api文档加入缓存,访问更丝滑</div>
+            <div style="color: #5cb85c">返回用户资料的接口对身份证信息加密</div>
+            <div style="color: #5cb85c">增加查询收获码接口</div>
+
+
+            <br>
+            <li>2019-12-13 10:34:12</li>
+            <br>
+            <div style="color: #5cb85c">更换短信验证码平台，测试留意验证码数字重复的bug</div>
+            <div style="color: #5cb85c">修复增加收货地址接口中性别乱填引起的异常</div>
+
+
+            <br>
+
+
+
+
+            <li>2019-12-12 14:26:45</li>
+            <br>
+            <div style="color: #5cb85c">获取收获地址接口增加字段</div>
+            <br>
+
+
+
+            <li>2019-12-11 16:26:07</li>
+            <br>
+            <div style="color: #5cb85c">修复注册一级代理商时的bug</div>
+            <div style="color: #5cb85c">优化部分web接口回传数据的格式</div>
+            <br>
+
+            <li>2019-12-11 09:55:07</li>
+            <br>
+            <div style="color: #5cb85c">用户注册、获取验证码两个接口加入安全校验，限制同一IP访问次数，5秒内调用接口超过5次将会加入限制，限制时长1小时，期间再次调用接口会返回错误信息，如:{
+                "code": -5,
+                "message": "IP已被限制，解除限制剩余60分钟",
+                "data": 3600
+                }</div>
+            <br>
+
+            <li>2019-12-09 14:34:01</li>
+            <br>
+            <div style="color: #5cb85c">登录、注册、重置密码接口改动，密码上送需要加密后传输;</div>
+            <br>
+            <div style="color: #5cb85c">身份认证接口改动，证件号和姓名加密后传输;</div><br>
+
+            <li>2019-12-09 11:59:42</li>
+            <br>
+            <div style="color: #5cb85c">查询验证码接口去除token校验;</div>
+            <br>
+            <div style="color: #5cb85c">修复注册接口必填字段未填写也可以注册成功的bug;</div>
+            <br>
+            <div style="color: #5cb85c">修复个人资料更新接口bug;</div>
+            <br>
+            <div style="color: #5cb85c">修复添加收货地址接口必填字段异常的bug;</div>
+            <br>
+            <div style="color: #5cb85c">修复关注接口必填字段异常的bug;</div>
+            <br>
+
+            <li>2019-12-06 17:00:42</li>
+            <br>
+            <div style="color: #5cb85c">添加收获地址增加字段：isDefaultAddress</div>
+            <br>
+            <div style="color: #5cb85c">增加前段获取图片上传token接口：POST ->> getQNToken</div>
+            <br>
+            <div style="color: #5cb85c">优化收获web首页数据接口返回实体</div>
+            <br>
+
+        </ul>
+    </td>
+</tr>
+</body>
+</html>
+
+
+
+
+

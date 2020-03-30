@@ -1,0 +1,358 @@
+//添加余额
+POST https://www.api.huyuwl.cn/wb/web/addBalance.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|2457f18e9430539237dce25eb456f230
+
+{
+  "price": 100000,
+  "userId": "62d6a3a2-9371-48f2-bf20-1133debf124c"
+}
+###
+//查询收获码
+POST https://www.api.huyuwl.cn/wb/web/getTransactionCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|2457f18e9430539237dce25eb456f230
+
+{
+  "orderId": "wb-1575524754092"
+}
+
+###
+//审核商户
+POST https://www.api.huyuwl.cn/wb/web/verMerchant.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "merchanId": "48",
+  "bType": 1,
+  "errMsg": "测试"
+}
+
+###
+//获取商户列表
+POST https://www.api.huyuwl.cn/wb/web/getMerchantList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|9ddcdf5796f7532c4476dc1bd1a7d898
+
+{
+  "bType": 3
+}
+
+
+###
+//删除封禁代理商
+POST https://www.api.huyuwl.cn/wb/web/delOrBanAgentUser.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|9aecd0cb5ea920ec49ea25958d380721
+
+{
+  "userId": "cde5db05-010b-40d7-9407-96f187932d34",
+  "bType": 2
+}
+
+###
+//修改用户资料
+POST https://www.api.huyuwl.cn/wb/web/updateUserInfo.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 117dd0ef-e621-439c-855a-bfbc874700e0|a3f215fe2619b6ce86dad422f2afa3c3
+
+{
+  "userName": "测试的用户",
+  "phoneNumber": 18888888888
+}
+
+###
+//获取代理商列表
+POST https://www.api.huyuwl.cn/wb/web/getAgentList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|a0bdcf079ad932d21203e28760b6b75a
+
+{
+}
+###
+
+//添加首页侧边栏
+POST https://www.api.huyuwl.cn/wb/web/addWebHomeBaseTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+{
+  "permission": 0,
+  "title": "1-1",
+  "parentTabId": 567
+}
+
+###
+
+//删除首页菜单
+POST https://www.api.huyuwl.cn/wb/web/deleteWebHomeTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+
+{
+  "tabId": 569
+}
+
+###
+
+
+//菜单 改
+POST https://www.api.huyuwl.cn/wb/web/updateWebHomeTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+
+{
+  "tabId": 569,
+  "title": "999990999999"
+}
+
+
+###
+
+//菜单 查询
+POST https://www.api.huyuwl.cn/wb/web/getWebHomeTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+
+
+###
+
+//菜单 根据ID查询一个实体
+POST https://www.api.huyuwl.cn/wb/web/getHomeTabDetail.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|9ddcdf5796f7532c4476dc1bd1a7d898
+
+{
+  "tabId": 567
+}
+
+
+###
+//获取注册码详情
+POST https://www.api.huyuwl.cn/wb/web/getRegisterCodeDetail.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|1
+
+{
+  "registerId": "ecdd6010-3e71-4513-9587-c737a6d40f95"
+}
+
+
+###
+//获取注册码列表
+POST https://www.api.huyuwl.cn/wb/web/getAllRegisterCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|9ddcdf5796f7532c4476dc1bd1a7d898
+
+
+
+###
+//获取省市区列表
+POST https://www.api.huyuwl.cn/wb/web/getCityList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|9ddcdf5796f7532c4476dc1bd1a7d898
+
+
+
+###
+//生成注册码
+POST https://www.api.huyuwl.cn/wb/web/creatRegisterCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|1
+
+{
+  "boundAreaListSrt": "110102000000",
+  "proportion": 20
+}
+
+
+###
+//删除注册码
+POST https://www.api.huyuwl.cn/wb/web/deleteRegisterCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|1
+
+{
+  "registerId": "e1eeea2e-1f36-4578-b42d-3fa6c8893961"
+}
+
+###
+
+//注册
+POST https://www.api.huyuwl.cn/wb/web/register.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "2",
+  "pwd": "2",
+  "realName": "王麻子",
+  "userName": "二级代理商",
+  "sex": 1,
+  "userLogo": "22222",
+  "proportion": "110101001000-30,110102001000-40",
+  "registerId": "85b7f955-7294-425d-b403-78582ac15cc5"
+}
+
+
+
+###
+
+//登录
+POST https://www.api.huyuwl.cn/wb/web/login.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "admin",
+  "pwd": "admin"
+}
+
+
+
+###
+
+
+###
+//删除公告栏
+POST https://www.api.huyuwl.cn/wb/web/deleteShowBoradContent.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 156075ca-b480-4d2e-84f5-9054f5973c19|991bb2772c598a99d99e6843dc660d6e
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+{
+}
+
+###
+
+//发布公告栏
+POST https://www.api.huyuwl.cn/wb/web/sendShowBoradContent.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 117dd0ef-e621-439c-855a-bfbc874700e0|e6a545e824482608ddf5213174b79499
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+{
+  "title": "标题",
+  "content": "测试的公告栏内容"
+}
+
+###
+
+
+
+
+//获取首页数据
+POST https://www.api.huyuwl.cn/wb/web/getHomeData.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|dae59ef2c25cdb9a1d128f78dac0d658
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+
+###
+
+
+//获取日志列表
+POST https://www.api.huyuwl.cn/wb/web/getLogList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|7364f99311d6b616ef421a33fd1db6aa
+
+
+###
+
+
+
+//查询验证码
+POST https://www.api.huyuwl.cn/wb/web/getMsgCodeByPhoneNumber.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+
+{
+  "phoneNumber": 15317026229
+}
+
+###
+
+//删除用户
+POST https://www.api.huyuwl.cn/wb/web/deleteOrBanUser.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "userPhoneNumber": "18888888880",
+  "doType": 1
+}
+
+###
+
+
+//获取用户列表
+POST https://www.api.huyuwl.cn/wb/web/getAllUsers.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|7364f99311d6b616ef421a33fd1db6aa
+
+{
+  "page": 1
+}
+
+###
+
+
+//抽奖
+POST https://www.api.huyuwl.cn/wb/web/getLuckFrawNumber.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###

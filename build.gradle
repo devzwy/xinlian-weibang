@@ -1,0 +1,136 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.0'
+    id "org.jetbrains.kotlin.plugin.jpa" version "1.3.0"
+    id 'org.springframework.boot' version '2.1.0.RELEASE'//2.1.0.BUILD-SNAPSHOT
+}
+
+//apply plugin: 'io.spring.dependency-management'
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'war'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    task packageSources(type: Jar) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+
+    }
+}
+ext {
+    libraries = [
+
+            rxjava       : "2.2.2",
+
+            logback      : "1.2.3",
+
+            spring_boot  : "2.1.0.RELEASE",
+
+            commons_pool2: "2.6.0",
+
+            fastjson     : "+"
+    ]
+}
+
+
+task copyJavaFile {
+    doFirst {
+        println '开始拷贝java文件'
+        copy {
+            from('src/main/java/com/xinlian/wb/controller/')
+            into('api_core/')
+        }
+    }
+
+    doLast {
+        println 'java文件拷贝成功'
+        println('环境变量:'+System.getenv("JAVA_HOME"))
+    }
+}
+
+bootJar {
+    doFirst {
+        println '开始打包Jar'
+        baseName = 'wb-spring-boot'
+        version = '1.3'
+    }
+    doLast {
+        println 'bootJar成功'
+    }
+}
+
+
+group 'com.xinlian.wb'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+def libs = rootProject.ext.libraries // 库
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+def jdkHome = System.getenv("JAVA_HOME")
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.3.0"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation "io.reactivex.rxjava2:rxjava:${libs.rxjava}"
+    implementation "ch.qos.logback:logback-classic:${libs.logback}"
+    implementation "ch.qos.logback:logback-core:${libs.logback}"
+    implementation "ch.qos.logback:logback-access:${libs.logback}"
+
+    implementation "org.springframework.boot:spring-boot-starter-web:${libs.spring_boot}"
+    implementation "org.springframework.boot:spring-boot-starter-parent:${libs.spring_boot}"
+    implementation "org.springframework.boot:spring-boot-starter-data-redis:${libs.spring_boot}"
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf:${libs.spring_boot}"
+    implementation "org.springframework.boot:spring-boot-starter-aop:${libs.spring_boot}"
+    implementation "org.springframework.boot:spring-boot-configuration-processor:${libs.spring_boot}"
+    implementation "org.springframework.boot:spring-boot-starter-cache:${libs.spring_boot}"
+    implementation "com.google.guava:guava:18.0"
+    implementation "org.yaml:snakeyaml:1.19"
+    implementation "cn.hutool:hutool-all:4.1.8"
+    implementation "com.squareup.okhttp3:okhttp:3.8.1"
+    compile files("$jdkHome/lib/tools.jar")
+    implementation "org.apache.commons:commons-pool2:2.6.0"
+    implementation group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    implementation "io.springfox:springfox-swagger2:+"
+    implementation "io.springfox:springfox-swagger-ui:+"
+    implementation "org.apache.commons:commons-pool2:${libs.commons_pool2}"
+    implementation "com.alibaba:fastjson:${libs.fastjson}"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.0"
+    implementation "mysql:mysql-connector-java:8.0.17"
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${libs.spring_boot}"
+    implementation "org.apache.maven.plugins:maven-source-plugin:2.4"
+    testCompile "org.springframework.boot:spring-boot-starter-test:${libs.spring_boot}"
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:+"
+    implementation group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '1.5.2.RELEASE'
+    implementation group: 'com.egzosn', name: 'pay-java-ali', version: '2.12.8'
+    implementation group: 'com.egzosn', name: 'pay-java-wx', version: '2.12.8'
+    implementation('com.egzosn:pay-spring-boot-starter:0.0.3')
+    compile group:'commons-lang',name: 'commons-lang',version:  '2.5'
+    implementation group: 'cn.jpush.api',name: 'jpush-client',version: '3.3.10'
+    implementation 'com.qiniu:qiniu-java-sdk:7.2.27'
+    implementation 'com.aliyun:aliyun-java-sdk-core:4.4.6'
+}
+
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+
+
+

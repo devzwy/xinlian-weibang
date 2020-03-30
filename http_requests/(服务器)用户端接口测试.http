@@ -1,0 +1,647 @@
+//获取全部跑腿代办、同城配送
+POST https://www.api.huyuwl.cn/wb/business/getAllRunErrand
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:eec21274-1a09-4729-a941-88215e279bd5|4944efb83cf8750483b30abb0873be2a
+
+{"type":0,"page":1,"number":5}
+
+###
+
+
+//加解密测试
+GET https://www.api.huyuwl.cn/wb/user/RSATest?testStr=123456&doType=0
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###
+//获取商户列表
+POST https://www.api.huyuwl.cn/wb/web/upload1
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|46401504c9c722b8e74383284fbe2a14
+
+
+
+
+###
+//获取全部需求
+POST https://www.api.huyuwl.cn/wb/other/getAllRequirements
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:eec21274-1a09-4729-a941-88215e279bd5|e4fc923d4f13a035a67f20262e52bcef
+
+{
+  "lat": 100,
+  "lng": 111
+}
+###
+
+
+//获取商户列表
+POST https://www.api.huyuwl.cn/wb/business/getMerchantList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|46401504c9c722b8e74383284fbe2a14
+
+###
+###
+//获取上传token
+POST https://www.api.huyuwl.cn/wb/business/getQNToken
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+###
+//取货
+POST https://www.api.huyuwl.cn/wb/business/takeDelivery
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+{
+  "orderId": "wb-1575524754092"
+}
+
+###
+
+//抢单 跑腿代办
+POST https://www.api.huyuwl.cn/wb/business/grabUserRunErrandSheet
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|d0ca44e213d8eee8843959f2a819c1d2
+
+{
+  "orderId": "wb-1577083550209"
+}
+
+###
+
+
+
+
+//获取订单详情
+POST https://www.api.huyuwl.cn/wb/business/getOrderDetail
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|4e241039accc69311efc6f88b788116f
+
+{
+  "orderId": "wb-1578298145003"
+}
+
+###
+
+//发布跑腿代办同城配送
+POST https://www.api.huyuwl.cn/wb/business/createRunErrand
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|bf96285d4250b6bb0bf4e495ce28dde7
+
+
+{
+  "tradeNames": "测试的跑腿代办订单",
+  "TempoDiServizio": -1,
+  "sendLat": 100,
+  "sendLng": 100,
+  "addresId": 73,
+  "price": 1000
+}
+
+###
+
+
+//获取跑腿代办标签
+POST https://www.api.huyuwl.cn/wb/business/getRunErrandsTags
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+
+
+###
+
+
+//获取商户详情
+POST https://www.api.huyuwl.cn/wb/business/getMerchantDetail
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|fb152dd47619a14274196690dc3073ca
+
+{
+  "userId": "62d6a3a2-9371-48f2-bf20-1133debf124c"
+}
+
+
+###
+//商户入驻/修改商户资料
+POST https://www.api.huyuwl.cn/wb/business/merchantAuth
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|7e04d5ae337f80da24f362c5bba33c73
+
+{
+  "merchanId": "45",
+  "merchanTitle": "TestTitle",
+  "merchanUserName": "Jason",
+  "merchanPhoneNumber": "1888888888",
+  "idemyityName": "王利香",
+  "idemyityCardNumber": "430223199810138025",
+  "merchanPhotos": "aaaaa|bbbb",
+  "merchanBaseTagId": 5,
+  "serviceTime": "lll",
+  "city_merchan": "TestCity222222",
+  "addressDetail_Merchan": "aaaaaa",
+  "addressInfo": "testInfo",
+  "serverBusinessLicenseType": 0,
+  "serverBusinessLicenseName": "testName",
+  "serverBusinessLicenseNumber": "111111",
+  "serverBusinessLicenseEndTime": 10000111,
+  "serverBusinessLicensePhotos": "aaa",
+  "serverPermitLicenseNmae": "name",
+  "serverPermitLicenseRange": "aaaaa",
+  "serverPermitLicenseEndTime": 111,
+  "serverPermitLicensePhotos": "ccccc"
+}
+
+###
+//订单评价
+POST https://www.api.huyuwl.cn/wb/business/orderComm
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c051d44c-7b9b-4927-b7e8-491eb11b8fc6|9e80104e7dd0aa29f37ceacad85e3ecb
+
+{
+  "orderId": "wb-1574495589913"
+}
+
+###
+//完成订单
+POST https://www.api.huyuwl.cn/wb/business/finishOrder
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+{
+  "orderId": "wb-1575524754092",
+  "tCode": 7541
+}
+
+###
+
+//取消订单
+POST https://www.api.huyuwl.cn/wb/business/cancleOrder
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3f04aac65591a9b027b65108a1c99a74
+
+{
+  "orderId": "wb-1575517895636"
+}
+
+
+###
+
+//创建订单
+POST https://www.api.huyuwl.cn/wb/business/createOrder
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 62d6a3a2-9371-48f2-bf20-1133debf124c|6e90e539bc4993db676ee5c27fd4714c
+
+{
+  "orderType": 0,
+  "orderBusinessId": 101,
+  "number": 1,
+  "sTime": 1111111,
+  "sAddressId": 73,
+  "orderDec": "测试购买技能",
+  "price": 600,
+  "specsId": 102
+}
+
+
+
+
+###
+//更新用户地理位置和推送ID信息
+POST http://www.api.huyuwl.cn/wb/business/updataUserLocationAndDeviceId
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "lat": 888,
+  "lng": 100,
+  "deviceId": ""
+}
+
+
+###
+
+//查询用户余额
+POST http://www.api.huyuwl.cn/wb/business/getBalance
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+
+###
+
+//订单支付
+POST https://www.api.huyuwl.cn/wb/business/pay
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|6e90e539bc4993db676ee5c27fd4714c
+
+{
+  "orderId": "wb-1576810467985",
+  "payType": 2,
+  "price": 600
+}
+
+###
+
+//获取订单列表
+POST https://www.api.huyuwl.cn/wb/business/getOrderList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|3fd6a01786c764ed65ed42b3997f27d8
+
+{
+  "page": 1,
+  "state": -1,
+  "number": 5,
+  "userId": "933d165c-260b-4cdc-9467-e77024af94be"
+}
+
+###
+
+
+
+
+
+//退出登录
+POST https://www.api.huyuwl.cn/wb/sign/signOut
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: d9fff180-06fa-47b8-ba91-01f3b4f1f511|f54346869811b4af34f0ab67741cb3c1
+
+
+
+###
+//获取技能详情
+POST https://www.api.huyuwl.cn/wb/business/getSkillDetail
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|efc9c15fac5ed54c3cd21364557a0880
+
+{
+  "skillId": 5
+}
+
+###
+
+###
+
+//发布技能
+POST https://www.api.huyuwl.cn/wb/business/sendSkill
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|2ab5ff27eb34f4881b7324296175b252
+
+{
+  "serviceDec": "(服务)爱犬丢失，望好心人士看到后告知我，定有重礼相送，左侧为我家二狗子的照片",
+  "imgsUrl": "http://111222.jpg|http://222222.jpg",
+  "unitStr": "元",
+  "p_tag": 4,
+  "title": "TestTitle",
+  "s_tag": 99,
+  "lat": 111.1111111111,
+  "lng": 222.2222222222,
+  "specsList": [
+    {
+      "specsTitle": "第二个技能对应的规格1",
+      "specsPrice": 1000
+    },
+    {
+      "specsTitle": "第二个技能对应的规格2",
+      "specsPrice": 2000
+    }
+  ]
+}
+
+###
+
+
+//获取用户技能列表
+POST https://www.api.huyuwl.cn/wb/business/getSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|2ab5ff27eb34f4881b7324296175b252
+
+{
+}
+
+###
+
+
+//获取全部技能列表
+POST https://www.api.huyuwl.cn/wb/business/getAllSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|2ab5ff27eb34f4881b7324296175b252
+
+{
+  "lat": 31.037872,
+  "lng": 121.251729,
+  "page": 1,
+  "number": 20,
+  "subTagId": -1
+}
+
+
+###
+
+//关注用户
+POST https://www.api.huyuwl.cn/wb/user/likeOrDisLikeUser
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|1
+
+// 1 2    151 153     2 2   155  157   3 2   149
+{
+  "userId": "62d6a3a2-9371-48f2-bf20-1133debf124c",
+  "doType": "0"
+}
+
+
+
+###
+
+//获取关注列表
+POST http://www.api.huyuwl.cn/wb/user/getUserLikedList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+###
+
+
+//收藏/取消收藏技能
+POST http://www.api.huyuwl.cn/wb/business/likeOrUnUnLikeSkill
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "skillId": 384,
+  "doType": 0
+}
+
+
+
+
+
+###
+
+
+//技能留言
+POST http://www.api.huyuwl.cn/wb/business/addSkillMessage
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "skillId": 382,
+  "content": "测试 - 8888888888"
+}
+
+
+###
+
+
+//获取收藏的技能列表
+POST https://www.api.huyuwl.cn/wb/business/getLikedSkills
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:c051d44c-7b9b-4927-b7e8-491eb11b8fc6|9e80104e7dd0aa29f37ceacad85e3ecb
+
+###
+
+//用户实名认证
+POST https://www.api.huyuwl.cn/wb/user/authCard
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:e60f2c5b-761e-45aa-a6d0-0dca0114f32d|1a2f7c7ff4c3810e5b1b5eb8027d57fd
+
+{
+  "cardNumber": "620522199303113734",
+  "userRelName": "赵文贇"
+}
+
+###
+
+
+//校验token
+POST https://www.api.huyuwl.cn/wb/sign/checkUserToken
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|ac82c6773711bc8d927f0c6b10ebd7d3
+
+
+###
+//注册
+POST https://www.api.huyuwl.cn/wb/sign/register
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "15317026229",
+  "userType": 0,
+  "msgCode": "7344",
+  "password": "R6LKU/SxaZo3NexJJ/Ur+ccz5Yo4a5zP820VUMPmqiioTJfe2nxyvWtCRKWqXrvn0oxmxS+lh/m7rRnV7ec60UQer+gGON3i1aqKVt3KxKosape1Q+mFI0HzQLPgf0iW6B3ccPTCb2ctQ00jwBG7mavbmgL9WozULiH2YofZJXWgrXshmBlDC3mWI9FBTeFtOOUc8CalTJIUa+WFe+XDXiwE/wzQfmXTCGm4jxEza5mYktriuPQ/eV7HL3PUffbd+mtJvAd/X9TljHTRb8bFJUWAiH9EoojBBJracHCxpe254OBqzkowX8X6u2ZUohWfJvqQOoZa1lNthREVYNe3aA==",
+  "registerType": 0
+}
+
+###
+
+//获取验证码
+POST https://www.api.huyuwl.cn/wb/sign/getMsgCode
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "15317026229"
+}
+
+
+###
+
+//登录 www.api.huyuwl.cn www.api.huyuwl.cn
+POST https://www.api.huyuwl.cn/wb/sign/doSign
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "15317026229",
+  "msgCode": "3718",
+  "password": "R6LKU/SxaZo3NexJJ/Ur+ccz5Yo4a5zP820VUMPmqiioTJfe2nxyvWtCRKWqXrvn0oxmxS+lh/m7rRnV7ec60UQer+gGON3i1aqKVt3KxKosape1Q+mFI0HzQLPgf0iW6B3ccPTCb2ctQ00jwBG7mavbmgL9WozULiH2YofZJXWgrXshmBlDC3mWI9FBTeFtOOUc8CalTJIUa+WFe+XDXiwE/wzQfmXTCGm4jxEza5mYktriuPQ/eV7HL3PUffbd+mtJvAd/X9TljHTRb8bFJUWAiH9EoojBBJracHCxpe254OBqzkowX8X6u2ZUohWfJvqQOoZa1lNthREVYNe3aA==",
+  "signType": 0,
+  "cType": 1,
+  "userType": 0
+}
+
+###
+
+//重置密码
+POST https://www.api.huyuwl.cn/wb/sign/reSetPassword
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "15317026229",
+  "msgCode": "111111",
+  "password": "111111111"
+}
+
+###
+
+
+//获取banner
+POST https://www.api.huyuwl.cn/wb/business/getBanner
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "bannerType": 0
+}
+
+###
+
+
+
+//获取动态
+POST http://www.api.huyuwl.cn/wb/business/getDynamic
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+
+###
+
+
+//获取用户资料
+POST https://www.api.huyuwl.cn/wb/user/getUserInfo
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|bcf70c5ae145ba78a9e322d5e9138d35
+
+{
+  "userId": ""
+}
+
+###
+//修改用户资料
+POST https://www.api.huyuwl.cn/wb/user/updateUserInfo
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|bcf70c5ae145ba78a9e322d5e9138d35
+
+{
+  "birthday": 999999999,
+  "sex": -1,
+  "userLogo": "http://e.hiphotos.baidu.com/image/pic/item/4610b912c8fcc3cef70d70409845d688d53f20f7.jpg",
+  "userName": "系统管理员"
+}
+
+###
+
+//增加收货地址
+POST https://www.api.huyuwl.cn/wb/user/addAddress
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:62d6a3a2-9371-48f2-bf20-1133debf124c|d0bcc7f0e36d3a850277be9a324b7a30
+
+{
+  "phoneNumber": "15317026229",
+  "address_head": "陕西省西1111111安市2222",
+  "address_end": "长安区62222222",
+  "name": "张四",
+  "sex": "1",
+  "tag": "家",
+  "isDefaultAddress": true
+}
+
+###
+
+//获取收货地址
+POST https://www.api.huyuwl.cn/wb/user/getUserAddressList
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:f8a07401-cf2c-44a5-9156-3d87a1d13fa3|953f40efe05ee7e4868580573071fbcc
+
+###
+
+
+
+
+//获取标签  www.api.huyuwl.cn       www.api.huyuwl.cn
+POST https://www.api.huyuwl.cn/wb/user/getTags
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###
+
+//获取标签  www.api.huyuwl.cn       www.api.huyuwl.cn
+POST https://www.api.huyuwl.cn/wb/user/getTagsVersion
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###
+

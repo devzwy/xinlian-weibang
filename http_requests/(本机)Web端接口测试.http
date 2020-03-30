@@ -1,0 +1,508 @@
+//开启关闭首页标签展示
+POST https://localhost/wb/web/openOrCloseHomeSubTag.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|15bc483e3ff80b55f30a2e13dd6e9d44
+
+{
+  "subTagId": 29,
+  "doType": 1
+}
+
+###
+
+
+
+//开启封禁标签
+POST https://localhost/wb/web/controllerSubTag.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|15bc483e3ff80b55f30a2e13dd6e9d44
+
+{
+  "subTagId": 29,
+  "doType": 0
+}
+
+###
+//提现审核
+POST https://localhost/wb/web/withdrawalAudit.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|550728843a660ac214cfcce15ae005b0
+
+{
+  "withdrawalId": 543,
+  "bType": 0
+}
+
+###
+//封禁/解封技能
+POST https://localhost/wb/web/sendSystemNotification.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|77053e5d26ede4b6e4de4cbf30ab6abc
+
+{
+  "notificationTitle": "系统发送的测试标题3",
+  "notificationContent": "系统发送的测试内容3",
+  "userId": "eec21274-1a09-4729-a941-88215e279bd5"
+}
+###
+//封禁/解封技能
+POST https://localhost/wb/web/doBanSkill.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+{
+  "skillId": 35,
+  "doType": 1
+}
+
+###
+//获取全部技能列表
+POST https://localhost/wb/web/getAllSkill.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+{
+}
+
+###
+
+
+//封禁/解封需求
+POST https://localhost/wb/web/doBanDemand.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+{
+  "demandId": 68,
+  "doType": 0
+}
+
+###
+//获取全部需求列表
+POST https://localhost/wb/web/getAllDemand.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+{
+  "state": 3
+}
+
+###
+
+//用户充值流水查询
+POST https://localhost/wb/web/userTopUpWater.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:f221bc6c-aa43-4788-9e0a-eab615f6b1e2|ee735b673653b260ac0303cb94cc1714
+
+{
+}
+
+###
+//分成流水
+POST https://localhost/wb/web/dividedWaterSearch.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+{
+  "state": 2,
+  "page": 1,
+  "number": 2
+}
+
+###
+//提现成功或失败
+POST https://localhost/wb/web/markWithdrawal.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|48405d9f236b0011bab2f36aa3cabbc4
+
+{
+  "id": 460,
+  "state": 2,
+  "errMsg": "test"
+}
+
+###
+
+//添加余额
+POST https://localhost/wb/web/addBalance.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|cbe2792db47cca8401d3cfbd3f15983f
+
+{
+  "price": 100.519,
+  "userId": "c25988df-95de-4d2e-92d2-2e70be6c8ca1"
+}
+
+###
+
+
+//查询收获码
+POST https://localhost/wb/web/getTransactionCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|57f4932f0004f0edb66533502e4d7ea1
+
+{
+  "orderId": "wb-1578988805586"
+}
+
+###
+//审核商户
+POST https://localhost/wb/web/verMerchant.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|ac5d782393a9186c17bab551de27f59e
+
+{
+  "merchanId": "87",
+  "bType": 0,
+  "errMsg": "测试"
+}
+
+###
+//获取商户列表
+POST https://localhost/wb/web/getMerchantList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|7b912e3664914e3edbdd182d9bd91085
+
+{
+  "bType": 0
+}
+
+
+###
+//删除封禁代理商
+POST https://localhost/wb/web/delOrBanAgentUser.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|9aecd0cb5ea920ec49ea25958d380721
+
+{
+  "userId": "cde5db05-010b-40d7-9407-96f187932d34",
+  "bType": 2
+}
+
+###
+//修改用户资料
+POST https://localhost/wb/web/updateUserInfo.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 117dd0ef-e621-439c-855a-bfbc874700e0|a3f215fe2619b6ce86dad422f2afa3c3
+
+{
+  "userName": "测试的用户",
+  "phoneNumber": 18888888888
+}
+
+###
+//获取代理商列表
+POST https://localhost/wb/web/getAgentList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|a0bdcf079ad932d21203e28760b6b75a
+
+{
+}
+
+###
+
+//添加首页侧边栏
+POST https://localhost/wb/web/addWebHomeBaseTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+{
+  "permission": 0,
+  "title": "1-1",
+  "parentTabId": 567
+}
+
+###
+
+//删除首页菜单
+POST https://localhost/wb/web/deleteWebHomeTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+
+{
+  "tabId": 569
+}
+
+###
+
+
+//菜单 改
+POST https://localhost/wb/web/updateWebHomeTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|7364f99311d6b616ef421a33fd1db6aa
+
+{
+  "tabId": 569,
+  "title": "999990999999"
+}
+
+
+###
+
+//菜单 查询
+POST http://localhost/wb/web/getWebHomeTab.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|3d507c55041674ed264c281d9efd02a8
+
+
+###
+
+//菜单 根据ID查询一个实体
+POST https://localhost/wb/web/getHomeTabDetail.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|9ddcdf5796f7532c4476dc1bd1a7d898
+
+{
+  "tabId": 567
+}
+
+
+###
+//获取注册码详情
+POST https://localhost/wb/web/getRegisterCodeDetail.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|1
+
+{
+  "registerId": "ecdd6010-3e71-4513-9587-c737a6d40f95"
+}
+
+
+###
+//获取注册码列表
+POST https://localhost/wb/web/getAllRegisterCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|84ffa7218eef5a3888c8cc9323111259
+
+
+
+###
+//获取省市区列表
+POST https://localhost/wb/web/getCityList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+
+
+###
+//生成注册码
+POST https://localhost/wb/web/creatRegisterCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|84ffa7218eef5a3888c8cc9323111259
+
+{
+  "boundAreaListSrt": "110101000000"
+}
+
+
+###
+//删除注册码
+POST https://localhost/wb/web/deleteRegisterCode.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|63670a14cf808b8ee5708f0776fa55f3
+
+{
+  "registerId": "24c63438-eda3-45d0-ac58-4b54d1fa3b94"
+}
+
+###
+
+//注册
+POST https://localhost/wb/web/register.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "18000000000",
+  "pwd": "123456",
+  "realName": "1级代理商",
+  "userName": "1级代理商",
+  "sex": 1,
+  "userLogo": "22222",
+  "proportion": "110101000000-20",
+  "registerId": "5ba59999-c922-4ca4-98c1-39c861c94f6c"
+}
+
+
+
+###
+
+//登陆
+POST http://localhost/wb/web/login.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{
+  "phoneNumber": "admin",
+  "pwd": "admin"
+}
+
+
+
+###
+
+
+###
+//删除公告栏
+POST https://localhost/wb/web/deleteShowBoradContent.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 156075ca-b480-4d2e-84f5-9054f5973c19|991bb2772c598a99d99e6843dc660d6e
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+{
+}
+
+###
+
+//发布公告栏
+POST https://localhost/wb/web/sendShowBoradContent.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: 117dd0ef-e621-439c-855a-bfbc874700e0|e6a545e824482608ddf5213174b79499
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+{
+  "title": "标题",
+  "content": "测试的公告栏内容"
+}
+
+###
+
+
+
+
+//获取首页数据
+POST https://localhost/wb/web/getHomeData.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token: admin|dae59ef2c25cdb9a1d128f78dac0d658
+#token: 5a225a4e-85db-496c-8a2c-505ff25790e9|1bbdd352c41f0b43841337e1872d29a7
+
+
+###
+
+
+//获取日志列表
+POST https://localhost/wb/web/getLogList.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|7364f99311d6b616ef421a33fd1db6aa
+
+
+###
+
+
+
+//查询验证码
+POST https://localhost/wb/web/getMsgCodeByPhoneNumber.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+
+{
+  "phoneNumber": 15317026229
+}
+
+###
+
+//删除用户
+POST https://localhost/wb/web/deleteOrBanUser.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|admin
+
+{
+  "userPhoneNumber": "18888888880",
+  "doType": 1
+}
+
+###
+
+
+//获取用户列表
+POST https://localhost/wb/web/getAllUsers.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+token:admin|7364f99311d6b616ef421a33fd1db6aa
+
+{
+  "page": 1
+}
+
+###
+
+
+//抽奖
+POST https://localhost/wb/web/getLuckFrawNumber.web
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+###

@@ -1,0 +1,55 @@
+<!--每天生成一个文件，归档文件保存30天：-->
+<configuration>
+
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+    <!-- 彩色日志格式 -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%0.5t]){faint} %clr([%-20.40logger{39}]){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!--设置自定义pattern属性-->
+    <property name="pattern" value="%d{HH:mm:ss.SSS} [%-5level] [%thread] [%logger] %msg%n"/>
+
+    <!--控制台输出日志-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!--设置控制台输出日志的格式-->
+        <encoder>
+            <!--            <pattern>${pattern}</pattern>-->
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <!--滚动记录日志文件：-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--当天生成的日志文件名称：-->
+        <file>log/wb_log.out</file>
+        <!--根据时间来记录日志文件：-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--归档日志文件的名称：-->
+            <fileNamePattern>log/wb_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--归档文件保存30天-->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <!--生成的日志信息格式-->
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!--根root logger-->
+    <root level="INFO">
+        <!--设置根logger的日志输出目的地-->
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+
+</configuration>
